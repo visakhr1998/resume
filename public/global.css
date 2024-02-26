@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500|Open+Sans:300,400,500&display=swap');
+
+/* MY GLOBAL CSS VARIABLES */
+
+:root {
+  /* ADJUST COLOR */
+  /* --accent-color: #55777c; */
+  --link-color: #959595;
+  --accent-font: 'Open Sans', sans-serif;
+  --grey-dark: #333;
+  --grey-mid-dark: #545454;
+  --grey-mid: #717171;
+  --grey-light: #d5d5d5;
+
+  /* ADJUST SPACING */
+  --main-column-width: 65%;
+  --vertical-space-between-sections: 0.8rem;
+  --vertical-space-between-subsections: 0.7rem;
+  --horizontal-space-between-columns: 25px;
+  --horizontal-offset: -25px;
+  --list-line-height: 1.3em;
+
+  /* ADJUST APPEARANCE */
+  /* --column-order: row-reverse; */
+  /* --more-centered: center; */
+}
+
+/* DEFAULT GLOBAL STYLES */
+
+html, body {
+  @apply relative w-full h-full;
+}
+
+body {
+  @apply text-black m-0 p-8 box-border font-sans;
+}
+
+a {
+  @apply text-var(--link-color) no-underline;
+}
+
+label {
+  @apply block;
+}
+
+input, button, select, textarea {
+  @apply font-inherit text-inherit p-0.4em m-0 0.5em 0 box-border border border-solid border-ccc rounded-2px;
+}
+
+input:disabled {
+  @apply text-ccc;
+}
+
+input[type='range'] {
+  @apply h-0;
+}
+
+button {
+  @apply text-333 bg-f4f4f4 outline-none;
+}
+
+button:disabled {
+  @apply text-999;
+}
+
+button:not(:disabled):active {
+  @apply bg-ddd;
+}
+
+button:focus {
+  @apply border-666;
+}
+
+/* MY GLOBAL STYLES */
+
+main {
+  @apply w-16.5in h-11in p-2.3rem 3.75rem flex flex-col font-lato font-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply m-5px 0;
+}
+
+ul {
+  @apply m-5px 0 pl-19px;
+}
+
+hr.section-underline {
+  @apply m--1px 0 var(--vertical-space-between-subsections) 0;
+}
+
+.section {
+  @apply mb-var(--vertical-space-between-sections);
+}
+
+.section:last-child {
+  @apply mb-0;
+}
+
+.section-label {
+  @apply mb-0 text-accent-color font-accent-font text-1.85em uppercase text-center;
+}
+
+.title {
+  @apply flex font-accent-font text-1.3em font-semibold justify-between;
+}
+
+.subtitle {
+  @apply font-semibold;
+}
+
+.detail-container {
+  @apply mb-var(--vertical-space-between-subsections);
+}
+
+.detail-container:first-of-type {
+  @apply mt-0;
+}
+
+#main-column .detail-container:last-child {
+  @apply mb-0;
+}
+
+.top {
+  @apply flex mb-3px;
+}
+
+.top-right {
+  @apply leading-1.44rem;
+}
+
+.top-right .contact-item i {
+  @apply pr-3px;
+}
+
+i {
+  @apply text-var(--grey-dark);
+}
+
+.subtitle {
+  @apply font-accent-font;
+}
+
+.location {
+  @apply pt-3px;
+}
+
+.bottom {
+  @apply text-0.95em;
+}
+
+.description {
+  @apply text-1.02em;
+}
+
+.list {
+  @apply leading-var(--list-line-height) m-7px 0;
+}
+
+.list-item {
+  @apply mb-4px;
+}
+
+.detail-container a {
+  @apply text-0.9em;
+}
